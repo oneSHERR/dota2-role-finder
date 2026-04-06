@@ -26,7 +26,7 @@ npm run build
 
 ### 3. Деплой на GitHub Pages
 
-1. Создай репозиторий на GitHub
+1. Создай репозиторий на GitHub.
 2. Загрузи файлы проекта
 3. Включи GitHub Pages в настройках репозитория (Settings → Pages)
 4. Выбери ветку `main` и папку `/root` или `/docs`
