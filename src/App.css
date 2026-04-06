@@ -1,0 +1,168 @@
+/* Dota 2 Role Finder - Custom Styles */
+
+:root {
+  --bg-main: #050509;
+  --glass-bg: rgba(15, 15, 20, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --accent: #3a7bd5;
+  --accent-soft: rgba(58, 123, 213, 0.18);
+  --text-main: #f5f5f7;
+  --text-muted: #9b9ba1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255, 0, 92, 0.24), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(255, 0, 0, 0.18), transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(120, 0, 40, 0.18), transparent 55%),
+    linear-gradient(145deg, #020107 0%, #050509 45%, #050307 100%);
+  min-height: 100vh;
+  color: var(--text-main);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(58, 123, 213, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(58, 123, 213, 0.7);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(58, 123, 213, 0.4);
+  color: white;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid rgba(58, 123, 213, 0.6);
+  outline-offset: 2px;
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Progress bar styling */
+[data-slot="progress-indicator"] {
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff) !important;
+}
+
+/* Button hover glow */
+button:hover {
+  box-shadow: 0 4px 20px rgba(58, 123, 213, 0.3);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  border: 1px solid var(--glass-border);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero icon styling */
+.hero-icon {
+  width: 44px;
+  height: 25px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Match bar animation */
+.match-fill {
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Prevent text selection on buttons */
+button {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
